@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Sign Up Form by Colorlib
+.main
+  // Sing in  Form
+  section.sign-in
+    .container
+      .signin-content
+        .signin-image
+          figure
+            img(src='images/signin-image.jpg' alt='sing up image')
+          a.signup-image-link(href='http://localhost:3000/users/sign_up' method='') Create an account
+        .signin-form
+          h2.form-title Sign In
+          form#login-form.register-form(method='POST')
+            .form-group
+              label(for='your_email')
+                i.zmdi.zmdi-account.material-icons-name
+              input#email(type='text' name='email' placeholder='Your Email')
+            .form-group
+              label(for='your_pass')
+                i.zmdi.zmdi-lock
+              input#pass(type='password' name='pass' placeholder='Password')
+            .form-group.form-button
+              input#signin.form-submit(action='http://localhost:3100/api/auth/sign_in' type='submit' name='signin' value='Log in')
+          .social-login
+            span.social-label Or login with
+            ul.socials
+              li
+                a(href='#')
+                  i.display-flex-center.zmdi.zmdi-facebook
+              li
+                a(href='#')
+                  i.display-flex-center.zmdi.zmdi-twitter
+              li
+                a(href='#')
+                  i.display-flex-center.zmdi.zmdi-google
